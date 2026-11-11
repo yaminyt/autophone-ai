@@ -1,37 +1,24 @@
-# AutoPhone AI — $0 affiliate starter
+# AutoPhone AI — Marketplace V2
 
-This is a **static website generator**, not a live connected AI agent. It publishes only CSV rows marked `approved=yes` with HTTPS affiliate URLs. There is no scraping, paid API, automated social posting, or real product data. Do not publish demo offers as real offers.
+A premium, animated, mobile-responsive static smartphone discovery site for GitHub Pages. **No costs or API keys required.**
 
-## Run
+## Publish on your existing repository
 
-1. Install Python 3 (no third-party packages required).
-2. Run `python3 build.py` inside this directory.
-3. Open `index.html` in a browser.
-4. Apply to an affiliate network and obtain approval. Replace the demo CSV with accurately sourced products, *authorized affiliate URLs*, and verified details. Mark rows `approved=yes` only after checking them.
-5. Replace the placeholder contact email in `build.py` before publishing.
-6. Create a GitHub public repository and upload `index.html`, `build.py`, `products.csv`. Under Settings → Pages, choose Deploy from a branch, `main`, `/ (root)`.
-7. To update, edit CSV, rerun `python3 build.py`, commit updated `index.html`.
+1. Open https://github.com/yaminyt/autophone-ai
+2. Click **Add file → Upload files**.
+3. Upload **index.html**, **style.css**, **script.js**, and **README.md** from this ZIP to the **repository root**, not a subfolder.
+4. If GitHub asks about replacing existing files, commit the updated versions. If the browser upload refuses to overwrite, open each file in GitHub, click Edit (pencil), paste the replacement file content, and commit.
+5. Wait for GitHub Pages to rebuild, then visit https://yaminyt.github.io/autophone-ai/ and hard-refresh (Ctrl+Shift+R).
+6. Your existing `build.py` and `products.csv` may remain, but **do not run `build.py` to overwrite the new `index.html`**. This new design currently uses `script.js` for demonstration model cards.
 
-## Automation after approval
+## What is and isn't connected
 
-- Request authorized eBay product API/feed access; approval is not automatic.
-- Add a feed adapter using approved endpoints only. Respect rate limits, attribution, image rights, and permitted caching.
-- Run validation before publishing: authorized source, valid affiliate URL, correct condition, seller reliability, updated price, and required disclosure.
-- Schedule only after tests and access are granted. Keep social posts as drafts until platform API permissions are confirmed.
+- Working: responsive animated design, live search, brand filtering, compare up to two model families, accessible controls.
+- Not connected: real product feeds, affiliate links, retailer prices, AI model/API, payment processing, automatic updates.
+- The phone graphics are original CSS illustrations, not official device photos.
+- Do not publish invented product prices or availability. Add approved feeds and retailer attribution before live offers.
+- Add a real contact email, privacy policy, and required disclosures before affiliate program applications.
 
-## Safety checklist
+## Cost
 
-- Do not publish unsupported IMEI, battery health, condition, or sales claims.
-- Keep affiliate disclosure next to links.
-- No automated purchases, bank access, paid ads, or scraping.
-- No keys or personal information in public repositories.
-- Confirm program rules allow your chosen hosting and traffic sources.
-
-## Test plan
-
-- Empty/invalid affiliate links never publish.
-- `approved=no` rows never publish.
-- Check HTML escaping on product fields.
-- Test mobile view and outbound links.
-- Confirm disclosures and contact details.
-- Recheck prices and stock before publishing; remove expired offers.
+$0 using GitHub Pages and the existing public repository. The entire $50 budget remains available.
